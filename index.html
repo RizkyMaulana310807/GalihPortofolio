@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradien dari ungu ke biru */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Container Styling */
+        .biodata-wrapper {
+            display: flex;
+            align-items: flex-start; /* Mengatur agar foto dan biodata sejajar di atas */
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 800px; /* Lebar maksimum yang lebih besar */
+            width: 100%;
+            box-sizing: border-box;
+            transform: translateY(-30px);
+            opacity: 0;
+            animation: slideIn 1s ease forwards;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px; /* Jarak antara foto dan biodata */
+        }
+
+        .biodata-container {
+            width: 100%;
+        }
+
+        /* Heading Styling */
+        h1 {
+            text-align: left; /* Judul di sebelah kiri */
+            color: #1e90ff;
+            margin-bottom: 25px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: textSlide 1.2s ease-in-out;
+        }
+
+        /* Biodata Item Styling */
+        .biodata-item {
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .biodata-item:hover {
+            transform: scale(1.05);
+        }
+
+        .biodata-item label {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+            font-size: 16px;
+        }
+
+        .biodata-item span {
+            display: block;
+            padding: 10px;
+            background-color: #f4f8ff;
+            border: 1px solid #d0e1ff;
+            border-radius: 8px;
+            color: #555;
+            transition: all 0.4s ease;
+        }
+
+        .biodata-item span:hover {
+            background-color: #1e90ff;
+            color: #fff;
+        }
+
+        /* Hover effect for container */
+        .biodata-wrapper:hover {
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes textSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="biodata-wrapper">
+        <img src="profile.jpg" alt="Foto Profil" class="profile-image">
+        <div class="biodata-container">
+            <h1>Biodata Diri</h1>
+
+            <div class="biodata-item">
+                <label>Nama Lengkap:</label>
+                <span>Galih Ramdhan Agung Prastyo</span>
+            </div>
+
+            <div class="biodata-item">
+                <label>Tanggal Lahir:</label>
+                <span>18 September 2007</span>
+            </div>
+
+            <div class="biodata-item">
+                <label>Hobi:</label>
+                <span>Bermain Futsal</span>
+            </div>
+
+            <div class="biodata-item">
+                <label>Cita-Cita:</label>
+                <span>Menjadi Bos Muda</span>
+            </div>
+
+            <div class="biodata-item">
+                <label>Jurusan:</label>
+                <span>Teknik Informatika</span>
+            </div>
+
+            <div class="biodata-item">
+                <label>Alamat:</label>
+                <span>Perum Bina Karya, Desa Jaya Mekar</span>
+            </div>
+
+            <div class="biodata-item">
+                <label>Agama:</label>
+                <span>Islam</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
